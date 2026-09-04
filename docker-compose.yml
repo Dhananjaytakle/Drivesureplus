@@ -1,0 +1,11 @@
+services:
+  dsp-renderer:
+    build: .
+    container_name: dsp-renderer
+    restart: unless-stopped
+    mem_limit: 700m
+    ports:
+      - "3010:3000"
+    environment:
+      - PORT=3000
+      - RENDER_TOKEN=${RENDER_TOKEN}
