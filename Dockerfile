@@ -1,5 +1,5 @@
 FROM node:20-slim
-RUN apt-get update && apt-get install -y --no-install-recommends unzip ca-certificates && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y --no-install-recommends unzip ffmpeg ca-certificates && rm -rf /var/lib/apt/lists/*
 WORKDIR /app
 COPY dsp-renderer.zip .
 RUN unzip -o dsp-renderer.zip && rm dsp-renderer.zip
